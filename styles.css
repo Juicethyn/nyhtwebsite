@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif, "Roboto";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: 0.6s;
+    padding: 10px 100px;
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 10px 100px;
+    background: #1C1C1C;
+}
+
+header .logo{
+    position: relative;
+    font-weight: bold;
+    font-size: 50px;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: "Roboto";
+    cursor: default;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    font-size: 20px;
+    font-family: "Roboto";
+    transition: 0.3s;
+}
+
+header.sticky .logo,
+header.sticky ul li a,
+header.sticky .checkbtn{
+    color: #f9f9f9;
+}
+
+a:hover{
+    color: #7E33FF;
+}
+
+header.sticky a:hover{
+    color: #7E33FF;
+    transition: 0.3s;
+}
+
+/* Mobile Navbar */
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    .image{
+        max-width: 100%;
+        min-width: 300px;
+        max-height: auto;
+    }
+}
+
+/* Home page */
+
+.home-container{
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 0px;
+}
+
+.homeitems h1{
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.homeitems p {
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.homeitems span{
+    color: #7E33FF;
+}
+
+.homeitems img{
+    width: 591px;
+    height: 560px;
+}
+
+.homeitems a{
+    display: inline-block;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600px;
+    text-decoration: none;
+    color: #f9f9f9;
+    border-radius: 20px;
+    padding: 5px 30px;
+    background: #7E33FF;
+    margin-top: 5px;
+}
+
+
+/* About */
+
+.about-container{
+    background-color: #1C1C1C;
+    height: auto;
+    font-family: "Roboto";
+    padding: 90px 0px;
+    text-align: center;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.aboutitems h1{
+    color: #f9f9f9;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.aboutitems span{
+    color: #7E33FF;
+}
+
+.aboutitems p {
+    line-height: 150%;
+    color: #f9f9f9;
+    font-size: 23px;
+    margin: 0px 200px;
+    font-weight: 400;
+}
+
+.whatido h1{
+    padding: 50px 100px;
+    color: #f9f9f9;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.whatido span{
+    color: #7E33FF;
+}
+
+/* Three Cards */
+
+.three-container{
+    color: #f9f9f9;
+}
+.three-container h1{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.card{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card .threecards{
+    background-color: #2B2B2C;
+    margin-bottom: 50px;
+    width: 370px;
+    margin: 15px 40px;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* About Part 2 */
+
+.aboutpart2{
+    background-color: #1C1C1C;
+    height: auto;
+    font-family: "Roboto";
+    padding: 90px 0px;
+}
+
+.skills h1{
+    color: #f9f9f9;
+    text-align: center;
+    font-size: 40px;
+}
+
+.skills span{
+    color: #7E33FF;
+}
+
+/* Skills Bar */
+
+.skill-container-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill-container{
+    font-family: "Roboto";
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill-name{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill-bar{
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+
+.skill-per{
+    height: 14px;
+    background: #7E33FF;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -40px;
+    right: 0;
+    transform: translate(50%);
+}
+
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f9f9f9;
+    top: -20px;
+    right: 0;
+    transform: translate(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars {
+    from{
+        width: 0;
+    }
+    
+    to{
+        width: 100%;
+    }
+}
+
+/* Tools I use */
+
+.tools span{
+    color: #7E33FF;
+}
+
+.tools h1 {
+    color: #f9f9f9;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.four-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.four-container h1 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f9f9f9;
+}
+
+.four-container .tool {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.four-container .tool .fourtool {
+    margin: 0 80px;
+    padding: 50px 0;
+}
+
+
+/* Gallery Page */
+
+
+.gallery{
+    background-color: #1C1C1C;
+    height: auto;
+    font-family: "Roboto";
+    padding: 90px 0px;
+    text-align: center;
+}
+
+.gallery-container h1{
+    color: #f9f9f9;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.gallery-container span{
+    color: #7E33FF;
+}
+
+.gallery-container p {
+    line-height: 150%;
+    color: #f9f9f9;
+    font-size: 23px;
+    margin: 0px 200px;
+    font-weight: 400;
+}
+
+.gallery-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannergroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.banners {
+    margin: 0 30px;
+    padding: 20px 0;
+}
+
+.banners img {
+    height: 132px;
+    width: 392px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.105);
+}
+
+
+/* Contact Page */
+
+.contact-container{
+    background-color: #1C1C1C;
+    height: auto;
+    font-family: "Roboto";
+    padding: 90px 0px;
+}
+
+.contact-container h1{
+    color: #f9f9f9;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+}
+
+.contact-container span{
+    color: #7E33FF;
+}
+
+.contact-container p {
+    line-height: 150%;
+    color: #f9f9f9;
+    font-size: 23px;
+    margin: 0px 200px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contact-box-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-box{
+    width: 500px;
+    background-color: #1c1c1c;
+    box-shadow: 0 0 20px 0 #2B2B2C;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+}
+
+form {
+    margin: 35px;
+}
+
+.input-field{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #7E33FF;
+    border-radius: 14px;
+    outline: none;
+    background-color: #1C1C1C;
+    color: #f9f9f9;
+}
+
+.textarea-field{
+    height: 150px;
+    padding-top: 10px;
+}
+
+.btn{
+    color: #f9f9f9;
+    border-radius: 20px;
+    margin: 10px 0px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #7E33FF;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
